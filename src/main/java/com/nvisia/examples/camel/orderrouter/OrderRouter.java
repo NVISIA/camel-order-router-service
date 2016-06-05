@@ -43,7 +43,7 @@ public class OrderRouter extends FatJarRouter {
             .apiContextPath("api-doc")
             // Properties for Swagger
             // Title of the API
-            .apiProperty("api.title", "Order Management API")
+            .apiProperty("api.title", "Order Router API")
             // Version of the API
             .apiProperty("api.version", "1.0.0")
             // CORS (resource sharing) enablement
