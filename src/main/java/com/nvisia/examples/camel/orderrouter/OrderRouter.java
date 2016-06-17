@@ -79,7 +79,6 @@ public class OrderRouter extends FatJarRouter {
             // Empty the body
             .setBody(constant(""))
             // Now, aggregate the data to an order type
-            .end()
             // Use multicasting to call the customer and catalog item services
             // in parallel. Then, use a strategy that groups the exchanges
             // returned from the service calls into a single list for
@@ -113,8 +112,6 @@ public class OrderRouter extends FatJarRouter {
                   exchange.getIn().setBody(order);
                }
             })
-            // End this processor definition
-            .end()
             // Need to marshal the body to JSON
             .marshal()
             // Need to use JSON for marshalling
